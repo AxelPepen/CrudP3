@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>CrudP3</title>
 </head>
 <body>
-    <h1>Axel Pepen</h1>
+    <div class="container">
+        <h1>Axel Pepen - CRUD Basico</h1>
+
+        
+        <button class="btn btn-create" onclick="alert('Crear nuevo objeto')">+ Crear nuevo</button>
+
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>1</td>
+                    <td>Articulo de ejemplo</td>
+                    <td>Este es un objeto de prueba</td>
+                    <td>
+                        <button class="btn btn-view" onclick="alert('Ver objeto')">Ver</button>
+                        <button class="btn btn-edit" onclick="alert('Editar objeto')">Editar</button>
+                        <button class="btn btn-delete" onclick="alert('Eliminar objeto')">Eliminar</button>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
