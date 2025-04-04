@@ -55,3 +55,15 @@ function showProducts() {
     localStorage.setItem('products', JSON.stringify(products));
     showProducts();
   }
+
+// Funcion para editar producto
+function editProduct(id) {
+    const products = getProducts();
+    const product = products.find(p => p.id === id);
+    
+    document.getElementById('name').value = product.name;
+    document.getElementById('price').value = product.price;
+    document.getElementById('category').value = product.category;
+  
+    deleteProduct(id); // Eliminamos el producto y lo volveremos a agregar al guardar cambios
+  }
