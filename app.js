@@ -22,3 +22,7 @@ function addProduct(e) {
   showProducts();
 }
 
+// Funcion para obtener productos del Local Storage
+function getProducts() {
+    return JSON.parse(localStorage.getItem('products')) || [];
+  }
