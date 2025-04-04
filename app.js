@@ -26,3 +26,25 @@ function addProduct(e) {
 function getProducts() {
     return JSON.parse(localStorage.getItem('products')) || [];
   }
+
+  // Funcion para mostrar los productos en la tabla
+function showProducts() {
+    const products = getProducts();
+    const list = document.getElementById('product-list');
+    list.innerHTML = '';
+  
+    products.forEach(product => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${product.name}</td>
+        <td>$${product.price}</td>
+        <td>${product.category}</td>
+        <td>
+          <button class="edit" onclick="editProduct(${product.id})">Editar</button>
+          <button class="delete" onclick="deleteProduct(${product.id})">Eliminar</button>
+        </td>
+      `;
+      list.appendChild(row);
+    });
+  }
+  
